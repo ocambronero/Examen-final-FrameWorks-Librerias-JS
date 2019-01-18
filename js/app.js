@@ -22,15 +22,16 @@ $(".btn-reinicio").click(function(){
     $('.titulo-over').hide();
     $(".panel-score").css("width","25%");
     $(".panel-tablero").show();
-    $(".time").show();
-    $(this).html("Reiniciar");
 
     limpiarTablero();
     movimientos=0;
     puntaje=0;
     $("#score-text").html(puntaje);
     $("#movimientos-text").html(movimientos);
-  }else reinicio=1;
+  }else {
+    reinicio=1;
+  }
+  $('.btn-reinicio').html('Reiniciar');
   clearInterval(tiempo);
   clearInterval(titulo);
   clearInterval(cargarTablero);
